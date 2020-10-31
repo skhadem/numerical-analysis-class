@@ -9,12 +9,14 @@ Focuses on numerical solution of nonlinear equations, interpolation, methods in 
 Requires a **prerequisite** course of MATH 3430 or APPM 2360 and APPM 3310 (minimum grade C-).
 
 ### Related courses at CU
-This course is similar to [CSCI-3656 Numerical Computation](https://github.com/cu-numcomp/numcomp-class/) but has a bit more analysis (and more math prerequisites), fewer implementation details, and similar but not identical topics.
+This course is similar to the CS department's [CSCI-3656 Numerical Computation](https://github.com/cu-numcomp/numcomp-class/) but has a bit more analysis (and more math prerequisites), fewer implementation details, and similar but not identical topics.
+
+This APPM/MATH 4650 course is cross-listed in both the Applied Math and Math departments. It is offered every semester, being taught in the fall by an Applied Math faculty (usually 2 sections) and in the spring by a Math faculty (usually 1 section), and sometimes it is offered in the summer as well.  The second semester course is 4660, taught in spring by Applied Math; about half the students in 4650 take the second semester course.
 
 ### Programming
 Homeworks will involve by mathematical analysis and programming.
 
-Students are expected to already know how to program.  We encourage using Python and Matlab; Julia is another good choice though we will not be using it explicitly.  For homework assignments, usually the deliverable is the outcome of some code, so therefore the student may choose any reasonable programming language. However, we will be doing demonstrations in Python and/or Matlab (and the instructor/TA are best at debugging Python and Matlab).  Many of our demonstrations will be using [github](http://github.com) in conjunction with [colab](https://colab.research.google.com/)
+Students are expected to already know how to program.  We encourage using Python and Matlab; Julia is another good choice though we will not be using it explicitly.  For homework assignments, usually the deliverable is the outcome of some code, so therefore the student may choose any reasonable programming language. However, we will be doing demonstrations in Python and/or Matlab (and the instructor/TA are best at debugging Python and Matlab).  Many of our demonstrations will be using [github](http://github.com) in conjunction with [python via colab](https://colab.research.google.com/).
 
 ### Principal Topics
 - Floating point numbers
@@ -69,6 +71,8 @@ For reference, chapters 7--12, which are *not* covered in this first semester co
 12. Numerical Solutions to Partial Differential Equations
 
 
+
+
 # Detailed list of topics
 i.e., what we actually covered.  Topics listed for dates in the future are just estimates.
 
@@ -97,6 +101,125 @@ i.e., what we actually covered.  Topics listed for dates in the future are just 
 
 ### Week 3, Sep 9-Sep 11 2020.  Chapter 2
 - Mon (no lecture due to Labor Day)
-- Wed: "Newton's Method" (2 videos of 16 and 9.5 minutse; [notes](Notes/Ch2_NewtonsMethod.pdf))
+- Wed: "Newton's Method" (2 videos of 16 and 9.5 minutes; [notes](Notes/Ch2_NewtonsMethod.pdf))
   - [Ch2_FixedPointPlots.ipynb](Demos/Ch2_FixedPointPlots.ipynb) demo which uses a nice [geogebra online cobweb plotting app](https://www.geogebra.org/m/uvsfvNDt)
-- Fri:
+- Fri: "Newton's Method Variants" (secant method, etc.) (2 videos of 21 and 17.5 minutes; [notes](Notes/Ch2_NewtonsMethodVariants.pdf))
+  - [Ch2_NewtonsMethod.ipynb](Demos/Ch2_NewtonsMethod.ipynb) demo
+
+### Week 4, Sep 14-Sep 18 2020. Chapter 2 and 3
+- Mon: "Aitken Extrapolation" (16 min video; [notes](Notes/Ch2_AitkenExtrapolation.pdf)) and "Zeros of Polynomials and Muller's Method" (8.5 min; [notes](Notes/Ch2_ZerosPolynomialMullers.pdf))
+  - Note: we switched attendance models, and now use PlayPosit quizzes to record an attendance grade
+  - Demo: finish the Newton's method demo from Friday
+- Wed: "Intro to Interpolation" (24 min video; [notes](Notes/Ch3_IntroInterpolation.pdf)) and "Lagrange interpolation" (13 min video; [notes](Notes/Ch3_LagrangeAndBarycentricInterpolation.pdf))
+  - [Ch2_AitkenExtrapolation.ipynb](Demos/Ch2_AitkenExtrapolation.ipynb) demo
+- Fri: "Barycentric Interpolation formula" (17 min video; [same notes as before](Notes/Ch3_LagrangeAndBarycentricInterpolation.pdf)) and "Lagrange Interpolation Error Bounds" (10 min video; [same notes as before](Notes/Ch3_LagrangeAndBarycentricInterpolation.pdf)) and "Divided Differences, part 1" (11.5 min video; [notes](Notes/Ch3_DividedDifferences.pdf))
+  - [Ch3_PolynomialInterpolation.ipynb](Demos/Ch3_PolynomialInterpolation.ipynb) demo, which also links to other demos
+  - Further resources on Lagrange interpolation:
+    - [8 min youtube video](https://www.youtube.com/watch?v=_zK_KhHW6og) (nice handwriting)
+    - [42 min youtube video](https://www.youtube.com/watch?v=M8hF7QChkSY) (with Vandermonde matrix and divided differences) -- this is a standard classroom blackboard lecture from Wen Shen at Penn State (textbook author, nice handwriting)
+    - [13 min youtube video](https://www.youtube.com/watch?v=C1Jijw3VaI0)
+
+### Week 5, Sep 21-24 2020. Chapter 3
+- Mon: "Divided Differences, part 2" (18 min; [same notes as before](Notes/Ch3_DividedDifferences.pdf)) and "Hermite Interpolation" (14 min; [notes](Notes/Ch3_Hermite.pdf))
+  - Demo: continue demo from last Friday
+- Wed: "Splines" (part 1, 15 min; part 2, 8 min; part 3, 24 min; [notes](Notes/Ch3_Splines.pdf) )
+  - No Demo, but there's a [midterm review](Notes/Review_Midterm1.pdf) with [answers](Notes/Review_Midterm1.soln.pdf)
+- Fri: Review / Q&A for midterm.  Take-home midterm handed out
+  - The [written part of the midterm](Exams/Midterm1.pdf) (2 hours, open note, open book), and there was a 45 min true/false or multiple choice section we took via Canvas
+
+### Week 6, Sep 28-Oct 2 2020. Chapter 4 (finite differences)
+- Mon: "Intro to numerical differentiation" (19 min; [notes](Notes/Ch4_FiniteDifferencesIntro.pdf))
+  - Demo: [splines](Demos/Ch3_Splines.ipynb)
+- Wed: "Finite differences" (32 min; [notes](Notes/Ch4_FiniteDifferences_more.pdf))
+  - Demo: [finite differences](Demos/Ch4_FiniteDifferences.ipynb) which we did together in lecture
+- Fri: "Richardson extrapolation" (23 min; [notes](Notes/Ch4_RichardsonExtrapolation.pdf))
+  - Demo: none
+
+### Week 7, Oct 5-Oct 9 2020. Chapter 4 (numerical integration)
+- Mon: "Intro to quadrature" (28 min; [notes](Notes/Ch4_quadrature_intro.pdf)), and "Newton Cotes formula" (2 videos, 12 min each; [notes](Notes/Ch4_quadrature_NewtonCotes.pdf))
+  - Demo: [Misc_speedExamples.ipynb](Demos/Misc_speedExamples.ipynb) and [Ch4_RichardsonExtrapolation.ipynb](Demos/Ch4_RichardsonExtrapolation.ipynb)
+- Wed: "Composite quadrature" (29 min; [notes](Notes/Ch4_quadrature_composite.pdf))
+  - Demo: [Ch4_integration.ipynb](https://github.com/stephenbeckr/numerical-analysis-class/blob/master/Demos/Ch4_integration.ipynb)
+  - Note: we are *not* covering Gregory's method; if you're interested, see Bengt Fornberg's talk [Gregory formulas and improving on the Trapezoidal rule](https://www.colorado.edu/amath/sites/default/files/attached-files/2019_unm_0.pdf)
+- Fri: "Romberg integration" (31 min; [notes](Notes/Ch4_RombergIntegrationEulerMacLaurin.pdf))
+  - Demo: [Ch4_CompositeIntegration.ipynb](Demos/Ch4_CompositeIntegration.ipynb)
+
+### Week 8, Oct 12-Oct 16 2020. Chapter 4 (numerical integration)
+- Mon: "Adaptive integration" (28 min; [notes](Notes/Ch4_AdaptiveIntegration.pdf))
+  - Demo: [Ch4_RombergIntegration.ipynb](Demos/Ch4_RombergIntegration.ipynb)
+- Wed: "Gaussian quadrature" (2 videos, 21 min and 32 min; [notes](Notes/Ch4_GaussianQuadrature.pdf))
+  - Demo: [Ch4_AdaptiveIntegration.ipynb](Demos/Ch4_AdaptiveIntegration.ipynb)
+  - Further resources on Gaussian quadrature:
+    - a 4 part youtube video series:
+          1. [Preview](https://www.youtube.com/watch?v=k-yUdqRXijo)
+          2. [Part 1: Legendre polynomials](https://www.youtube.com/watch?v=65zwMgGZnUs)
+          3. [Part 2: Determining the weights](https://www.youtube.com/watch?v=nQZYBWB6q_k)
+          4. [Part 3: Explanation](https://www.youtube.com/watch?v=cKKrGr93f6c)
+    - Lloyd Trefethen, "[Is Gauss Quadrature Better than Clenshaw–Curtis?](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.157.4174&rep=rep1&type=pdf)"", SIAM Review 50(1), pp. 67–87 (2008)
+    - Topics in our class: Gauss-Legendre, Gauss-Laguerre, Gauss-Hermite; *skip* Chebyshev-Gauss. Note that we are *not* covering Clenshaw-Curtis
+- Fri: "Multiple Integrals" (26 min; [notes](Notes/Ch4_MultipleIntegrals.pdf))
+  - Demo: [Ch4_GaussianQuadrature.ipynb](Demos/Ch4_GaussianQuadrature.ipynb)
+
+### Week 9, Oct 19-Oct 23 2020. Chapter 4 (numerical integration) and start Ch 5 (ODE solvers)
+- Mon: "Improper Integrals" (40 min; [notes](Notes/Ch4_ImproperIntegrals.pdf))
+  - Demo: [Ch4_MultidimensionalIntegrals.ipynb](Demos/Ch4_MultidimensionalIntegrals.ipynb)
+- Wed: "Introduction to ODEs" (44 min; [notes](Notes/Ch5_IntroToODEs.pdf))
+  - Demo: [Ch4_ImproperIntegrals.ipynb](Demos/Ch4_ImproperIntegrals.ipynb)
+  - We are *not* covering PDEs, implicit ODEs, nor [DAEs](https://en.wikipedia.org/wiki/Differential-algebraic_system_of_equations), but we are covering *systems of ODEs*
+- Fri: "Euler's Method" (2 videos, intro and error analysis, 10 and 35 min; [notes](https://github.com/stephenbeckr/numerical-analysis-class/blob/master/Notes/Ch5_EulersMethod.pdf))
+  - Demo: [Ch5_ODEs.ipynb](Demos/Ch5_ODEs.ipynb)
+
+
+### Week 9, Oct 26-Oct 3 2020. Chapter 5 (ODE solvers) and midterm
+- Mon: "Systems of ODEs" (32 min; [notes](Notes/Ch5_SystemsOfODEs.pdf))
+  - Demo: [Ch5_EulersMethod.ipynb](Demos/Ch5_EulersMethod.ipynb)
+- Wed: "Higher-order Taylor Methods" and local truncation error (26 min; notes)
+  - Demo: TBD
+- Fri: Review / Q&A for midterm 2. Take-home midterm handed out
+  - The written part of the midterm (2 hours, open note, open book), and there is a 45 min true/false or multiple choice section we take on Canvas
+
+
+
+
+# Subjects on the midterms and final
+
+You might try the [midterm study guide jupyter notebook](https://github.com/cu-numcomp/numcomp-class/blob/master/Midterm-StudyGuide.ipynb) used for the CS department's version of this class.
+
+## Midterm 1
+The high-level set of topics is anything we've discussed in class up to and including the "Divided Differences" video of Monday Sept 21.
+
+Below are specific chapters (in Burden and Faires 9th or 10th edition) that are covered:
+- Chapter 1 (preliminaries and error analysis)
+  - 1.1 review of calc
+  - 1.2 round-off errors
+  - 1.3 algorithms and convergence, in particular big-O notation
+- Chapter 2 (scalar root-finding)
+  - 2.1 bisection method
+  - 2.2 fixed point iteration
+  - 2.3 Newton's method
+  - 2.4 error analysis for iterative methods
+  - 2.5 accelerating convergence [*skip* Steffensen's method]
+  - 2.6 zeros of polynomials [fundamental theorem of algebra, but *skip* Horner's method as presented in the book (but you should know it as presented in the notes and HW), and *skip* Muller's method]
+- Chapter 3 (interpolation and polynomial approximation)
+  - 3.1 interpolation and the Lagrange polynomial (*skip* 3.2 on Neville's method)
+  - 3.3 divided differences
+
+## Midterm 2
+- Chapter 3 (interpolation and polynomial approximation)
+  - 3.4 Hermite Interpolation
+  - 3.5 cubic splines
+- Chapter 4 (numerical differentiation and integration)
+  - 4.1 intro: basic concepts (e.g., using interpolation), finite difference formulas
+  - 4.2 Richardson extrapolation
+  - 4.3 numerical integration (quadrature), Newton-Cotes formulas
+  - 4.4 composite quadrature
+  - 4.5 Romberg integration
+  - 4.6 Gaussian quadrature (Gauss-Legendre, Gauss-Laguerre, Gauss-Hermite; *skip* Chebyshev-Gauss). Note that we are *not* covering Clenshaw-Curtis
+  - 4.7 multiple (higher-dimension) integrals
+  - 4.8 improper integrals
+- Chapter 5 (IVPs for ODEs)
+  - 5.1 intro and theory for IVPs and ODEs
+  - 5.2 Euler's method
+
+## Final Exam
+TBD
