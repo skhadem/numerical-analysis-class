@@ -205,15 +205,53 @@ i.e., what we actually covered.  Topics listed for dates in the future are just 
 ### Week 13, Nov 16-Nov 20 2020. Chapter 5 (ODE solvers)
 - Mon: "Stability of multistep methods" and the characteristic polynomial (40 min; [notes](Notes/Ch5_Stability_2_multistep.pdf)), ch 5.10 continued
   - No demo
-- Wed:
+- Wed: "Stability Examples" (30 min; [notes](Notes/Ch5_Stability_3_examples.pdf))
+  - Demo: [Ch5_Stability.ipynb](Demos/Ch5_Stability.ipynb)
+- Fri: "Stiff Equations and Absolute Stability, part 1" (25 min, [notes](Notes/Ch5_Stability_4_stiff_absoluteStability.pdf)), ch 5.11
+  - No demo
+
+### Week 14, Nov 23-Nov 27 2020. Chapter 5 (ODE solvers), then Chapter 6 (linear algebra)
+- Mon: "Stiff Equations and Absolute Stability, part 2" (19 min, [notes (same as previous class)](Notes/Ch5_Stability_4_stiff_absoluteStability.pdf), and "Intro/review of linear algebra" (33 min; [notes](Notes/Ch6_LinearAlgebraIntro.pdf))
+  - Demo: [Ch5_AbsoluteStability.ipynb](Demos/Ch5_AbsoluteStability.ipynb)
+- Wed: Complexity of Matrix Multiplication" (22 min; the last part of the video is optional; [notes](Notes/Ch6_ComplexityMatrixMultiplication.pdf)) and "Systems of Linear Equations and Gaussian Elimination" (31 min; [notes](Notes/Ch6_SystemsOfEquations_GaussianElimination.pdf); we discuss some BLAS)
+  - Demo: [Ch6_MatrixMultiplication.ipynb](Demos/Ch6_MatrixMultiplication.ipynb), talk about BLAS and LAPACK
+- Fri: no class (Thanksgiving break)
+
+### Week 15, Nov 30-Dec 4 2020. Chapter 6 (systems of linear equations)
+In chapter 6, we're roughly covering the material from the book, but adding more (conditioning, more details on LAPACK/BLAS), and doing it in a differentn order
+- Mon: "LU factorization" (3 videos of 10--12 min each; [notes](Notes/Ch6_LUfactorization.pdf))
+  - Demo: no demo, but examples of numerics in practice
+  - COVID
+    - [Machine Learning to find antivirals](https://spectrum.ieee.org/artificial-intelligence/medical-ai/can-ai-and-automation-deliver-a-covid19-antiviral-while-it-still-matters)
+    - Molecular Dynamic simulations to find a vaccine, [summary](https://pubs.acs.org/doi/10.1021/acscentsci.0c01236#) and [main article](https://pubs.acs.org/doi/10.1021/acscentsci.0c01056)
+    - [Modeling the spread of COVID](https://spectrum.ieee.org/artificial-intelligence/medical-ai/why-modeling-the-spread-of-covid19-is-so-damn-hard) via ML, ODE compartmental (SIR) and agent-based models
+    - and the timely Nov 30 2020 [DeepMind protein folding breakthrough](https://www.nytimes.com/2020/11/30/technology/deepmind-ai-protein-folding.html)
+  - [Border & Becker paper](https://rdcu.be/bMwR2) on heritability
+    - Take statistics model, reduce computation time from $O(n^3)$ to $O(n^2)$
+    - Solving linear equations (via Lanczos, which you'll learn about next semester)
+    - Convert $\log(\det(X))$ to an integral, solve via Gaussian Quadrature, ties in with Lanczos
+    - Exploit a lot of linear algebra facts
+  - Many examples from CU. Here are just a handful:
+    - Alireza Doostan (CU aerospace), [Pass-efficient methods for compression of high-dimensional turbulent flow data](https://arxiv.org/pdf/1905.13257.pdf)
+    - Paul Constantine (CU CS), see his [Model Reduction for Complex Systems](https://vimeo.com/159629096) talk (about 5 min we see some applications)
+    - John Evans and Kurt Maute (CU aerospace), [Adaptive level set topology optimization using hierarchical B-splines](https://arxiv.org/pdf/1909.10607.pdf). Focus on optimization as well as representing geometries (B-splines)
+  - The [Chemical & Physical Oceanography group](https://www.colorado.edu/atoc/research/chemical-physical-oceanography) in the ATOC department (and they involve many researchers outside ATOC too, e.g., applied math)
+- Wed: "LU factorization details: pivoting" (26 min) and "LU factorization details: block factorization and special types of matrices" (19 min); both videos have these [notes](Notes/Ch6_LU_details_pivoting_Cholesky.pdf)
+  - Demo: [Ch6_LU_vs_Cholesky.ipynb](Demos/Ch6_LU_vs_Cholesky.ipynb) (short)
+- Fri: "Conditioning of solving linear systems" (20 min; introduces the spectra norm; [notes](Notes/Ch6_ConditioningOfLinearSystems.pdf)) and "Least Squares" (16 min; normal equations and QR; [notes](Notes/Ch6_LeastSquares.pdf))
+  - Demo: [Ch6_conditioning_LeastSquares.ipynb](Demos/Ch6_conditioning_LeastSquares.ipynb) (long) and [Ch6_RepeatedSolves.ipynb](Demos/Ch6_RepeatedSolves.ipynb) (short)
 
 
 # Subjects on the midterms and final
 
 You might try the [midterm study guide jupyter notebook](https://github.com/cu-numcomp/numcomp-class/blob/master/Midterm-StudyGuide.ipynb) used for the CS department's version of this class.
 
+Both midterm exams were take-home exams, self-timed with generous time limits. They had true-false/multiple-choice component via Canvas (closed note, closed book) for 45 min, and then 2 hours to solve word problems (scanned, uploaded to Gradescope) which was open note and open book but closed internet.  The exams are posted at [Exams](./Exams); solutions are available on Canvas.
+
 ## Midterm 1
 The high-level set of topics is anything we've discussed in class up to and including the "Divided Differences" video of Monday Sept 21.
+
+See the [Midterm 1 review](Notes/Review_Midterm1.pdf) and [Midterm 1 review solutions](Notes/Review_Midterm1.soln.pdf)
 
 Below are specific chapters (in Burden and Faires 9th or 10th edition) that are covered:
 - Chapter 1 (preliminaries and error analysis)
@@ -232,6 +270,9 @@ Below are specific chapters (in Burden and Faires 9th or 10th edition) that are 
   - 3.3 divided differences
 
 ## Midterm 2
+
+See the [Midterm 2 review](Notes/Review_Midterm2.pdf) and [Midterm 2 review solutions](Notes/Review_Midterm2.soln.pdf)
+
 - Chapter 3 (interpolation and polynomial approximation)
   - 3.4 Hermite Interpolation
   - 3.5 cubic splines
@@ -244,9 +285,36 @@ Below are specific chapters (in Burden and Faires 9th or 10th edition) that are 
   - 4.6 Gaussian quadrature (Gauss-Legendre, Gauss-Laguerre, Gauss-Hermite; *skip* Chebyshev-Gauss). Note that we are *not* covering Clenshaw-Curtis
   - 4.7 multiple (higher-dimension) integrals
   - 4.8 improper integrals
-- Chapter 5 (IVPs for ODEs)
+- Chapter 5 (numerical methods for IVPs/ODEs)
   - 5.1 intro and theory for IVPs and ODEs
   - 5.2 Euler's method
 
 ## Final Exam
-TBD
+The final is cumulative, but with extra emphasis on the following topics
+
+See the [Final Exam review](Notes/Review_Final.pdf) and [Final Exam review solutions](Notes/Review_Final.soln.pdf); see also the conceptual review sheet "KeyIdeas_DriscollBraun.pdf" on canvas
+
+The most important topics are marked with an asterisk*
+- Chapter 5 (numerical methods for IVPs/ODEs)
+  - 5.3 higher-order Taylor Methods
+  - 5.4 *Runge-Kutta Methods
+  - 5.5 error control and the Runge-Kutta-Fehlberg method (i.e., embedded formula)
+  - 5.6 *multistep methods
+  - 5.7 variable step-size Multistep methods (covered only very briefly)
+  - 5.8 extrapolation methods (covered only very briefly)
+  - 5.9 *higher-order equations and systems of ODEs
+  - 5.10 *stability (zero-stability/root-condition)
+  - 5.11 *stiff ODEs (absolute stability)
+- Chapter 6 (solving linear systems of equations)
+  - 6.1 *linear systems of equations
+  - 6.2 pivoting strategies
+  - 6.3 *linear algebra and matrix inversion (this should be review, but is's very important, so it has an asterisk)
+  - 6.4 determinant of a matrix (we didn't do a lecture on this but it's review from your linear algebra class, so you should make sure you're familiar with it)
+  - 6.5 *matrix factorization (LU factorization)
+  - 6.6 special types of matrices (LDL, Cholesky, tridiagonal systems)
+  - You should know the complexity of matrix multiplication
+  - You should have an understanding of LAPACK and BLAS
+  - The condition number of a matrix and its relevance
+  - We are *not* testing on least-squares methods
+
+Details on the final exam: unlike the midterms, this is not take-home.  We'll have a true-false/multiple-choice section on Canvas, then a written section that you'll scan and upload to Gradescope. There are 2.5 hours for the exam. We'll do this via zoom and you need your webcam on. We'll also use Proctorio, so make sure you have Chrome installed as well as the Proctorio Chrome extension.  This is an open-note exam and you can use your notes, my notes, and the book, but no internet is allowed (other than Canvas/Gradescope).
